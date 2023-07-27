@@ -52,7 +52,7 @@ navigate("/adddata")
     }
   return (
     <>
-<Box w="100%" border="1px solid red" h="90px">
+<Box w="100%" border="1px solid aquamarine" h="90px" id='navbar'>
 <Flex>
 <Box ml={"10%"} mt={"1%"}>
     <Text onClick={home1} color={"tear"} fontSize={"30px"} >BrainerHub Solutions</Text>
@@ -82,9 +82,9 @@ navigate("/adddata")
         </Select>
         <Box>
 <Flex ml={"150%"} mt={"2%"}>
-<button style={{width:"100px",height:"40px", border:"1px solid red",borderRadius:"10px",color:"white",background:"red"}} onClick={des} disabled={count===1}>Prev</button>
+<button style={{width:"200px",height:"40px", border:"1px solid red",borderRadius:"10px",color:"white",background:"red"}} onClick={des} disabled={count===1}>Prev</button>
     <Text ml={"1%"} mr={"1%"}>{count}</Text>
-    <button style={{width:"100px",height:"40px", border:"1px solid red",borderRadius:"10px",color:"white",background:"red"}} onClick={inc} >next</button>
+    <button style={{width:"200px",height:"40px", border:"1px solid red",borderRadius:"10px",color:"white",background:"red"}} onClick={inc} >next</button>
 </Flex>
     
 </Box> 

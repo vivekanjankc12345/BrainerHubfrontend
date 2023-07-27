@@ -12,7 +12,7 @@ const Homepage = () => {
     const [sort,setsort]=useState("")
     const [search,setsearch]=useState("")
     const log=useSelector((store)=>store.login)
-    console.log(log[0].username)
+    // console.log(log[0].username)
     useEffect(()=>{
         if(sort!=="")
         {
@@ -47,24 +47,30 @@ navigate("/login")
     const addpage=()=>{
 navigate("/adddata")
     }
+    const home1=()=>{
+        navigate("/")
+    }
   return (
     <>
 <Box w="100%" border="1px solid red" h="90px">
 <Flex>
-    <Box ml={"10%"} mt={"1%"}>
+<Box ml={"10%"} mt={"1%"}>
+    <Text onClick={home1} color={"tear"} fontSize={"30px"} >BrainerHub Solutions</Text>
+</Box>
+    <Box ml={"6%"} mt={"1%"}>
         <Button onClick={login}>Login</Button>
     </Box>
     <Box ml={"5%"} mt={"1%"}>
         <Button onClick={register}>Register</Button>
     </Box>
     <Box ml={"5%"} mt={"1%"}>
-        <Button onClick={addpage}>Adddata</Button>
+        <Button onClick={addpage}>Addproducts</Button>
     </Box>
     <Box ml={"5%"} mt={"1%"}>
         <Input placeholder='search by name' type='text' value={search} onChange={(e)=>setsearch(e.target.value)}  />
     </Box>
     <Box ml={"2%"} mt={"1%"}>
-        {log[0].username}
+        { log.length>0&&log[0].username}
     </Box>
 </Flex>
 </Box>
